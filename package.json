@@ -1,0 +1,39 @@
+{
+  "name": "angular-sharrre",
+  "version": "0.0.1",
+  "description": "sharrre directive for angular",
+  "homepage": "https://github.com/electblake/angular-sharrre",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/electblake/angular-sharrre.git"
+  },
+  "keywords": [
+    "angular",
+    "sharrre",
+    "angular-sharrre",
+    "social",
+    "media",
+    "social",
+    "sharer"
+  ],
+  "author": "electblake <electblake@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/electblake/angular-sharrre/issues"
+  },
+  "homepage": "https://github.com/electblake/angular-sharrre#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.4.1",
+    "jshint-stylish": "^2.0.1"
+  }
+}
