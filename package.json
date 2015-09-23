@@ -1,8 +1,8 @@
 {
   "name": "angular-sharrre",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "sharrre directive for angular",
-  "homepage": "https://github.com/electblake/angular-sharrre",
+  "homepage": "https://github.com/electblake/angular-sharrre#readme",
   "main": "index.js",
   "scripts": {
     "test": "gulp test"
@@ -25,7 +25,6 @@
   "bugs": {
     "url": "https://github.com/electblake/angular-sharrre/issues"
   },
-  "homepage": "https://github.com/electblake/angular-sharrre#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
