@@ -11,25 +11,32 @@ angular.module('angular-sharrre')
     return {
       restrict: 'EA',
       scope: {
-        url: '@',
-        title: '@',
-        text: '@',
+        url: '=shareUrl',
+        title: '=',
+        description: '=shareDescription',
+        text: '=shareText',
+        short_url: '=shortUrl',
+
         media: '@',
         graph: '=graphObject'
       },
-      link: function postLink(scope, element) {
+      controller: ['scope', 'element', function(scope, element) {
 
-        scope.$watch('graph', function(graph) {
+        
+        var onceGraph = scope.$watch('graph', function(graph) {
 
             if (graph) {
 
-                var object_url = window.location.protocol + '//' + window.location.host + graph.route;
-                var short_url = graph.share_url;
+                var object_url;
+                if (graph.route) {
+                    object_url = window.location.protocol + '//' + window.location.host + graph.route;
+                }
+                var short_url = graph.short_url;
 
                 window.jQuery(element).sharrre({
                     url: object_url,
-                    title: scope.graph.share_title,
-                    text: scope.graph.share_text,
+                    title: graph.title,
+                    text: graph.text,
                     share: {
                         // googlePlus: true,
                         facebook: true,
@@ -55,7 +62,7 @@ angular.module('angular-sharrre')
                         },
                         pinterest: {
                             media: scope.media,
-                            description: scope.graph.description,
+                            description: graph.description ? graph.description : graph.text,
                             url: object_url
                         }
                     },
@@ -83,10 +90,14 @@ angular.module('angular-sharrre')
                         });
                     }
                 });
+
+                // unbind
+                onceGraph();
+
             }
 
         }, true);
 
-      }
+      }]
     };
   }]);
