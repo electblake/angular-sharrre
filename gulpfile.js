@@ -9,12 +9,16 @@
 			.pipe($.jshint())
 			.pipe($.jshint.reporter(require('jshint-stylish')))
 			.pipe($.sourcemaps.init())
-			.pipe($.concat('angular-sharrre.min.js'))
+			.pipe($.concat('angular-sharrre.js'))
+			.pipe(gulp.dest('js'))
 			.pipe($.uglify({
 				mangle: true,
 				compress: true
 			}))
 			.pipe($.jsmin())
+			.pipe($.rename(function(file) {
+				file.extname = '.min' + file.extname;
+			}))
 			.pipe($.sourcemaps.write('./'))
 			.pipe(gulp.dest('dist'))
 	});
@@ -23,6 +27,7 @@
 		return del([
 			'dist/*.js',
 			'dist/*.js.map',
+			'js/*.js'
 			], cb)
 	});
 

@@ -7,8 +7,7 @@
   ],
   "description": "sharrre directive for angular",
   "main": [
-    "./dist/angular-sharrre.min.js",
-    "./dist/angular-sharrre.min.js.map"
+    "./js/angular-sharrre.js"
   ],
   "keywords": [
     "sharrre",
