@@ -1,4 +1,6 @@
 'use strict';
+angular.module('angular-sharrre', []);
+'use strict';
 
 /**
  * @ngdoc directive
