@@ -1,3 +1,11 @@
+### 0.0.5 (2015-09-22)
+
+
+#### Features
+
+* **Bower:** better exporting ([6c61da98](https://github.com/electblake/angular-sharrre#readme/commit/6c61da9876d5676154f5fafc28e28770302e257b))
+
+
 ### 0.0.4 (2015-09-22)
 
 
