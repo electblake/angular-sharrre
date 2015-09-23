@@ -20,14 +20,14 @@ angular.module('angular-sharrre')
       link: function postLink(scope, element) {
 
         scope.$watch('graph', function(graph) {
-            
+
             if (graph) {
 
-                var slug_url = window.location.protocol + '//' + window.location.host + graph.route;
+                var object_url = window.location.protocol + '//' + window.location.host + graph.route;
                 var short_url = graph.share_url;
 
                 window.jQuery(element).sharrre({
-                    url: slug_url,
+                    url: object_url,
                     title: scope.graph.share_title,
                     text: scope.graph.share_text,
                     share: {
@@ -36,7 +36,6 @@ angular.module('angular-sharrre')
                         twitter: true,
                         stumbleupon: true,
                         pinterest: true
-                        // pinterest: true
                     },
                     // enableTracking: true,
                     enableHover: false,
@@ -45,19 +44,19 @@ angular.module('angular-sharrre')
                         // googlePlus: { size: 'tall', annotation:'bubble' },
                         facebook: {
                             layout: 'button_count',
-                            url: slug_url
+                            url: object_url
                         },
                         twitter: {
                             count: 'horizontal',
                             url: short_url
                         },
                         stumbleupon: {
-                            url: slug_url
+                            url: object_url
                         },
                         pinterest: {
                             media: scope.media,
                             description: scope.graph.description,
-                            url: slug_url
+                            url: object_url
                         }
                     },
                     render: function(api, options){
